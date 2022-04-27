@@ -1,0 +1,157 @@
+.user {
+  display: flex;
+
+  &__content-container {
+    flex: 6;
+
+    .top {
+      padding: 2rem;
+      @include flex-direction(row, flex-start);
+      align-items: flex-start;
+      gap: 1.5rem;
+
+      .profile {
+        flex: 2;
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+        position: relative;
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+        padding: 2rem;
+
+        .edit-button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: rgba(0, 128, 128, 0.74);
+          color: #fff;
+          padding: .5rem 1rem;
+          cursor: pointer;
+          border-top-right-radius: 1rem;
+        }
+
+        .info {
+          color: gray;
+          font-weight: bold;
+          font-size: 1.7rem;
+        }
+
+        .item {
+          @include flex-direction(row, flex-start);
+          align-items: flex-start;
+          gap: 2rem;
+
+          .image {
+            width: 11.5rem;
+            height: 11.5rem;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          &__details {
+            .title {
+              font-size: 2.5rem;
+              color: rgba(0, 0, 0, 0.82)
+            }
+
+            .detail {
+              margin-bottom: 1rem;
+
+              .key {
+                color: rgba(128, 128, 128, 0.64);
+                font-weight: 700;
+                font-size: 1.4rem;
+              }
+
+              .value {
+                font-size: 1.3rem;
+                font-weight: bold;
+                color: #2d2b2b;
+              }
+            }
+          }
+        }
+
+      }
+
+      .user-chart {
+        flex: 2;
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+        position: relative;
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+        padding: 2rem;
+
+        .edit-button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: rgba(0, 128, 128, 0.74);
+          color: #fff;
+          padding: .5rem 1rem;
+          cursor: pointer;
+          border-top-right-radius: 1rem;
+        }
+
+        .info {
+          color: gray;
+          font-weight: bold;
+          font-size: 1.7rem;
+        }
+
+        .item {
+          @include flex-direction(row, flex-start);
+          align-items: flex-start;
+          gap: 2rem;
+
+          .image {
+            width: 11.5rem;
+            height: 11.5rem;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          &__details {
+            .title {
+              font-size: 2.5rem;
+              color: rgba(0, 0, 0, 0.82)
+            }
+
+            .detail {
+              margin-bottom: 1rem;
+
+              .key {
+                color: rgba(128, 128, 128, 0.64);
+                font-weight: 700;
+                font-size: 1.4rem;
+              }
+
+              .value {
+                font-size: 1.3rem;
+                font-weight: bold;
+                color: #2d2b2b;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+
+    .bottom {
+      margin-top: 1.5rem;
+      margin: 2rem;
+
+      .table-container {
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+        padding: 2rem;
+
+        h3 {
+          color: gray;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+  }
+}

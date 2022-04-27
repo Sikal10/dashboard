@@ -1,0 +1,88 @@
+.new__user {
+  display: flex;
+
+  &-container {
+    flex: 6;
+
+    .main {
+      margin: 2rem;
+
+      .top {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+
+        h1 {
+          font-size: 1.6rem;
+          color: gray;
+        }
+      }
+
+      .bottom {
+        display: flex;
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+
+        .left {
+          flex: 1;
+          text-align: center;
+
+          .image {
+            border-radius: 50%;
+            width: 10rem;
+            height: 10rem;
+            object-fit: cover;
+          }
+        }
+
+        .right {
+          flex: 2;
+
+          form {
+            @include flex-direction(row, space-around);
+            flex-wrap: wrap;
+            gap: 2rem;
+            text-align: center;
+            padding: 3rem 0;
+
+            .form-input {
+              width: 40%;
+
+              label {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: .5rem;
+                font-weight: 600;
+                color: grey;
+                font-size: 1.7rem;
+
+                .icon {
+                  font-size: 3rem;
+                }
+              }
+
+              input {
+                width: 100%;
+                padding: 0 .5rem;
+                border: none;
+                outline: 0;
+                border-bottom: 1px solid grey;
+              }
+            }
+
+            button {
+              display: block;
+              margin-top: 2rem;
+              color: white;
+              background: teal;
+              border: none;
+              width: 20%;
+              padding: 1rem .5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
