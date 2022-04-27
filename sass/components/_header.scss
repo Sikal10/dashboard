@@ -1,0 +1,69 @@
+.header {
+  border-bottom: .1rem solid rgba(225, 221, 221, 0.54);
+  height: 5.1rem;
+  @include flex-direction(row, flex-start);
+  color: #555;
+  font-size: 1.5rem;
+
+  &__container {
+    @include flex-direction(row, space-between);
+    width: 100%;
+    padding: 2rem;
+
+    .searchbar {
+      @include flex-direction(row, flex-start);
+      border: .1rem solid rgba(225, 221, 221, 0.66);
+      padding: .5rem;
+      border-radius: .2rem;
+
+      &__input {
+        border: none;
+        outline: none;
+        background: transparent;
+
+        &::placeholder {
+          font-size: 1.2rem;
+        }
+      }
+
+
+
+    }
+
+    .items {
+      @include flex-direction(row, flex-start);
+      gap: 1.5rem;
+
+      .item {
+        @include flex-direction(row, flex-start);
+        gap: .2rem;
+        position: relative;
+
+        .icon {
+          font-size: 2rem;
+        }
+
+        .avatar {
+          width: 4rem;
+          height: 4rem;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+
+        .counter {
+          width: 1.5rem;
+          height: 1.5rem;
+          background: red;
+          border-radius: 50%;
+          color: #fff;
+          font-size: 1rem;
+          font-weight: bold;
+          position: absolute;
+          top: -.5rem;
+          right: -.5rem;
+          @include flex-direction(row, center);
+        }
+      }
+    }
+  }
+}
