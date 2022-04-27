@@ -1,0 +1,75 @@
+.featured {
+  flex: 2;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 1rem;
+  border-radius: 1rem;
+
+  .top {
+    color: gray;
+    @include flex-direction(row, space-between);
+
+    .title {
+      font-size: 1.6rem;
+    }
+
+    .icon {
+      font-size: 1.6rem;
+    }
+  }
+
+  .bottom {
+    @include flex-direction(column, center);
+    gap: 1rem;
+    padding: 2rem;
+
+    .featuredChart {
+      width: 10rem;
+      height: 10rem;
+    }
+
+    .title {
+      font-size: 1.8rem;
+      color: gray;
+    }
+
+    .amount {
+      font-size:3rem;
+    }
+
+    .desc {
+      font-size: 1.5rem;
+      text-align: center;
+      color: rgba(128, 128, 128, 0.73);
+      font-weight: 200;
+    }
+
+   .summary {
+     width: 100%;
+     @include flex-direction(row, space-between);
+
+     &__item {
+       &-title {
+         font-size: 1.8rem;
+         color: gray;
+       }
+
+       &-result {
+         @include flex-direction(row, flex-start);
+         gap: .5rem;
+         margin-top: 1rem;
+         font-size: 1.6rem;
+
+         &.positive {
+           color: green;
+         }
+
+         &.negative {
+           color: red;
+         }
+       }
+     }
+   }
+
+  }
+}
