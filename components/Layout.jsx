@@ -1,14 +1,21 @@
-import React from 'react';
 import Sidebar from "./Sidebar";
 import Header from "./Header";
+import {useContext, useState} from "react";
+import {DarkModeContext} from "../context/DarkModeContext";
 
 const Layout = ({children}) => {
+    const {darkMode} = useContext(DarkModeContext);
+
     return (
-        <div>
+        <div className={darkMode ? "layout dark" : "layout"}>
             <Sidebar />
 
+            <div className={"layout__content-container"}>
+                <Header />
 
-            This is the layout
+                <main>{children}</main>
+            </div>
+
         </div>
     );
 };
