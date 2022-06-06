@@ -3,6 +3,8 @@ import {MdNotificationsNone, MdChatBubbleOutline, MdOutlineList, MdOutlineWbSunn
 import {useContext} from "react";
 import {DarkModeContext} from "../context/DarkModeContext";
 
+const link = "https://www.pinkvilla.com/imageresize/tom_cruise_action_movies.jpg?width=752&format=webp&t=pvorg";
+
 const Header = () => {
     const {darkMode, dispatch} = useContext(DarkModeContext)
 
@@ -46,7 +48,7 @@ const Header = () => {
                     </div>
 
                     <div className={"item"}>
-                        <img src="/images/me.jpg" className={"avatar"} alt=""/>
+                        <img src={link} className={"avatar"} alt=""/>
                     </div>
                 </div>
 
