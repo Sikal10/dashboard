@@ -1,15 +1,9 @@
-import React from 'react';
-import Sidebar from "../components/Sidebar";
-import Header from "../components/Header";
 import ListTable from "../components/ListTable";
 
 const User = () => {
     return (
         <section className={"user"}>
-            <Sidebar />
-
             <div className={"user__content-container"}>
-                <Header />
                 <main className={"user-profile"}>
                     {/*top*/}
                     <div className={"top"}>
@@ -45,7 +39,7 @@ const User = () => {
                             </div>
                         </article>
 
-                        <article className={"user-chart"}>
+                        <article className={"profile"}>
                             <div className="edit-button">Edit</div>
                             <h1 className={"info"}>Information</h1>
                             <div className="item">
