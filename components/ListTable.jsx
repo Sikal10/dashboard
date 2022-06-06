@@ -1,5 +1,7 @@
 import {Table, Tag, Image} from "antd";
 import {transformStatusToTag} from "../utils";
+import {MdOutlineSearch} from "react-icons/md";
+import {Input} from "antd";
 
 const ListTable = () => {
 
@@ -133,6 +135,18 @@ const ListTable = () => {
             title: 'Product',
             dataIndex: 'product',
             key: 'product',
+            filterDropdown: () => {
+                return <Input
+                    autoFocus
+                    onPressEnter={() => console.log("clicked")}
+                    placeholder={"Search Products..."}
+
+                />
+            },
+            filterIcon: () => {
+                return <MdOutlineSearch/>
+            }
+
         },
         {
             title: 'Customer',
@@ -178,7 +192,7 @@ const ListTable = () => {
 
     return (
         <div className={"table"}>
-            <Table columns={columns} dataSource={dataSource} />
+            <Table columns={columns} dataSource={dataSource} pagination={false}/>
         </div>
     );
 };

@@ -1,5 +1,3 @@
-import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
 import Widget from "../components/Widget";
 import Featured from "../components/Featured";
 import Chart from "../components/Chart";
@@ -9,12 +7,7 @@ import ListTable from "../components/ListTable";
 const Home = () => {
     return (
         <div className={"home"}>
-            {/*sidebar*/}
-            <Sidebar />
-
-            {/*content*/}
             <div className={"home__content-container"}>
-                <Header />
                 <main className={"home__content"}>
                     <div className={"widgets"}>
                         <Widget type={"user"} />

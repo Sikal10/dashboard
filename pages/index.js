@@ -1,9 +1,11 @@
 import Home from "../containers/Home";
+import Title from "../components/Title";
 
 export default function HomePage() {
-  return (
-      <div>
-        <Home />
-      </div>
-  )
+    return (
+        <>
+            <Title title={"Dashboard"} />
+            <Home/>
+        </>
+    )
 }
