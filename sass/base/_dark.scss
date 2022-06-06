@@ -1,0 +1,138 @@
+.layout.dark {
+  background: #222;
+  color: #eaeaea;
+
+  .featured {
+    .top {
+      .title {
+        color: grey;
+      }
+    }
+
+    .bottom {
+      p {
+        color: #eaeaea;
+      }
+    }
+  }
+
+  //customize antd table
+  .ant-table table, .ant-table-tbody {
+    background: #222;
+    color: whitesmoke;
+  }
+
+  .ant-table-tbody > tr:hover > td {
+    background: rgba(17, 17, 17, 0.47);
+  }
+
+  .ant-table-thead > tr > th {
+    color: #9b9b9b;
+    font-weight: 600;
+    text-align: left;
+    font-size: 14px;
+    line-height: 18px;
+    background: #222;
+    border-bottom: 1px solid white;
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+  }
+
+  .sidebar {
+    border-right: .1rem solid rgba(211, 211, 211, 0.2);
+
+    &__top {
+      h3 {
+        color: white;
+      }
+    }
+
+    &__center {
+      &-container {
+        .item {
+          .icon {
+            color: #999;
+          }
+
+          &:hover {
+            background: rgba(45, 43, 43, 0.85);
+          }
+        }
+      }
+    }
+
+    hr {
+      border: .1rem solid rgba(211, 211, 211, 0.2);
+    }
+  }
+
+  .header {
+    border-bottom: .1rem solid rgba(211, 211, 211, 0.2);
+
+    &__container {
+      .searchbar {
+        border: .1rem solid rgba(211, 211, 211, 0.2);
+      }
+
+      .icon {
+        color: rgba(255, 255, 255, 0.47);
+      }
+
+      .item {
+        color: floralwhite;
+      }
+    }
+
+  }
+
+  .new__user {
+    &-container {
+      input {
+        background: transparent;
+      }
+    }
+  }
+
+  .new__product {
+    &-container {
+      input {
+        background: transparent;
+      }
+    }
+  }
+
+  .user {
+    .profile {
+      .info {
+        color: lightgrey;
+      }
+
+      .item {
+        &__details {
+          .title {
+            color: lightgrey;
+          }
+
+          .detail {
+            .key {
+              color: lightgrey;
+            }
+
+            .value {
+              color: lightgrey;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .widget__left {
+    .link {
+      a {
+        text-decoration: none;
+        color: lightgrey;
+      }
+    }
+  }
+}
