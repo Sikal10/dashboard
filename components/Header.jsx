@@ -1,7 +1,11 @@
 import {MdSearch, MdOutlineLanguage, MdOutlineDarkMode, MdFullscreenExit} from "react-icons/md";
-import {MdNotificationsNone, MdChatBubbleOutline, MdOutlineList} from "react-icons/md";
+import {MdNotificationsNone, MdChatBubbleOutline, MdOutlineList, MdOutlineWbSunny} from "react-icons/md";
+import {useContext} from "react";
+import {DarkModeContext} from "../context/DarkModeContext";
 
 const Header = () => {
+    const {darkMode, dispatch} = useContext(DarkModeContext)
+
     return (
         <div className={"header"}>
             <div className="header__container">
@@ -17,7 +21,10 @@ const Header = () => {
                     </div>
 
                     <div className={"item"}>
-                        <MdOutlineDarkMode className={"icon"} />
+                        {darkMode ? <MdOutlineWbSunny onClick={() => dispatch({type: "TOGGLE"})} className={"icon"}/>
+                        : <MdOutlineDarkMode onClick={() => dispatch({type: "TOGGLE"})} className={"icon"} />
+                        }
+
                     </div>
 
                     <div className={"item"}>
