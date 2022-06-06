@@ -8,6 +8,8 @@
     @include flex-direction(row, center);
 
     h3 {
+      margin: auto;
+      color: grey;
       font-size: 2rem;
     }
   }
@@ -35,7 +37,7 @@
         margin: .5rem 0;
         padding: .5rem;
         cursor: pointer;
-        transition: all .5s ease-out;
+        transition: all .7s ease-out;
 
         &:hover {
           background: #ece8ff;

@@ -1,15 +1,19 @@
-import React from 'react';
 import {RiDashboardFill} from "react-icons/ri";
 import {FaUser} from "react-icons/fa";
 import {MdOutlineStoreMallDirectory} from "react-icons/md";
 import {MdExitToApp, MdCreditCard, MdLocalShipping, MdInsertChart, MdNotifications, MdSettings} from "react-icons/md";
 import Link from "next/link";
+import {useContext} from "react";
+import {DarkModeContext} from "../context/DarkModeContext";
 
-const Sidebar = () => {
+const Sidebar = ({setDarkMode}) => {
+    const {dispatch} = useContext(DarkModeContext);
+
+
     return (
         <div className={"sidebar"}>
             <div className={"sidebar__top"}>
-                <h3>Admin</h3>
+                <h3>Sikal</h3>
             </div>
 
             <hr/>
@@ -17,7 +21,7 @@ const Sidebar = () => {
             <div className={"sidebar__center"}>
                 <div className={"sidebar__center-container"}>
                     <p className={"title"}>Main</p>
-                    <div  className={"item"}>
+                    <div className={"item"}>
                         <RiDashboardFill className={"icon"} />
                         <Link href={"/"}><span>Dashboard</span></Link>
                     </div>
@@ -75,8 +79,8 @@ const Sidebar = () => {
             <div className={"sidebar__bottom"}>
                 <p className={"theme"}>Theme</p>
                 <div className={"sidebar__bottom-container"}>
-                    <div className={"colorOption"}/>
-                    <div className={"colorOption"}/>
+                    <div onClick={() => dispatch({type: "LIGHT"})} className={"colorOption"}/>
+                    <div onClick={() => dispatch({type: "DARK"})} className={"colorOption"}/>
                 </div>
             </div>
         </div>
