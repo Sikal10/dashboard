@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     MdKeyboardArrowUp,
     MdOutlinePersonOutline,
@@ -6,6 +5,7 @@ import {
     MdOutlineMonetizationOn,
     MdOutlineAccountBox
 } from "react-icons/md";
+import Link from "next/link";
 
 const Widget = ({type}) => {
     let data;
@@ -68,7 +68,9 @@ const Widget = ({type}) => {
             <div className="widget__left">
                 <span className="title">{data?.title}</span>
                 <span className="counter">{data?.isMoney && "$"} {amount}</span>
-                <span className="link">{data?.link}</span>
+                <span className="link"><Link href={`/${data.title.toLowerCase()}`}>
+                    {data?.link}
+                </Link></span>
             </div>
 
             <div className="widget__right">

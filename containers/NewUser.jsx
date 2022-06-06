@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
-import Sidebar from "../components/Sidebar";
-import Header from "../components/Header";
 import {MdOutlineDriveFolderUpload} from "react-icons/md";
 import Link from "next/link";
 
-const NewUser = () => {
+const NewUser = ({title}) => {
 
     const [file, setFile] = useState("");
 
@@ -12,14 +10,10 @@ const NewUser = () => {
 
     return (
         <section className={"new__user"}>
-            <Sidebar />
-
             <div className={"new__user-container"}>
-                <Header />
-
                 <div className={"main"}>
                     <div className={"top"}>
-                        <h1>Add New User</h1>
+                        <h1>{title}</h1>
                     </div>
 
                     <div className="bottom">
